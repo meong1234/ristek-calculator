@@ -2,16 +2,16 @@ package ristek.calculator;
 
 public class App {
   public static void main(String[] args) {
+    // Initialize Calculator
     Calculator calculator = new Calculator();
 
     try {
+      // Ensure inputs are valid
       String operation = args[0];
       Calculator.ensureValidOperation(operation);
 
-      int firstInput = 0;
-      int secondInput = 0;
-      firstInput = Integer.parseInt(args[1]);
-      secondInput = Integer.parseInt(args[2]);
+      int firstInput = Integer.parseInt(args[1]);
+      int secondInput = Integer.parseInt(args[2]);
 
       switch (operation) {
         case "add":
