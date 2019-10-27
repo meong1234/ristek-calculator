@@ -21,12 +21,14 @@ public class Calculator {
     return x / y;
   }
 
-  public static boolean isInvalidOperation(String operation) {
+  public static void ensureValidOperation(String operation) throws InvalidOperationException {
     for (String validOperation : validOperations) {
       if (operation == validOperation) {
-        return false;
+        return;
       }
     }
-    return true;
+    throw new InvalidOperationException(
+        "Operation is invalid, please input the following: " +
+        String.join(", ", validOperations));
   }
 }

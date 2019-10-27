@@ -34,18 +34,20 @@ class CalculatorTest {
   }
 
   @Nested
-  @DisplayName("Calculator isInvalidOperation Tests")
-  class isInvalidOperationTests {
+  @DisplayName("Calculator ensureValidOperation Tests")
+  class ensureValidOperationTests {
     @Test
     @DisplayName("Invalid Test")
     void invalidTest() {
-      Assertions.assertTrue(Calculator.isInvalidOperation("foo"));
+      Assertions.assertThrows(InvalidOperationException.class, () -> {
+        Calculator.ensureValidOperation("foo");
+      });
     }
 
     @Test
     @DisplayName("Valid Test")
     void validTest() {
-      Assertions.assertFalse(Calculator.isInvalidOperation("add"));
+      Assertions.assertDoesNotThrow(() -> Calculator.ensureValidOperation("add"));
     }
   }
 }
