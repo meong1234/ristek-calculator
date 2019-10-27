@@ -48,4 +48,14 @@ class AppTest {
         "Operation is invalid, please input the following: add, substract, multiply, divide",
         testStdout.toString());
   }
+
+  @Test
+  @DisplayName("Invalid Number Format Test")
+  void invalidNumberFormatTest() {
+    String[] validArgs = {"add", "bar", "baz"};
+    App.main(validArgs);
+    Assertions.assertEquals(
+        "Invalid number format, For input string: \"bar\"",
+        testStdout.toString());
+  }
 }

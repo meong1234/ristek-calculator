@@ -30,7 +30,7 @@ public class App {
     } catch (InvalidOperationException e) {
       System.out.print(e.getMessage());
     } catch (NumberFormatException e) {
-      System.out.print(e.getMessage());
+      System.out.print("Invalid number format, " + e.getMessage());
     }
   }
 }
