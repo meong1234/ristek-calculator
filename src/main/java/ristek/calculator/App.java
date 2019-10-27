@@ -28,9 +28,9 @@ public class App {
           break;
       }
     } catch (InvalidOperationException e) {
-      System.out.print(e);
+      System.out.print(e.getMessage());
     } catch (NumberFormatException e) {
-      System.out.print(e);
+      System.out.print(e.getMessage());
     }
   }
 }

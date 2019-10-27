@@ -45,7 +45,7 @@ class AppTest {
     String[] validArgs = {"foo", "1", "1"};
     App.main(validArgs);
     Assertions.assertEquals(
-        "ristek.calculator.InvalidOperationException: Operation is invalid, please input the following: add, substract, multiply, divide",
+        "Operation is invalid, please input the following: add, substract, multiply, divide",
         testStdout.toString());
   }
 }
