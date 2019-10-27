@@ -34,18 +34,18 @@ class CalculatorTest {
   }
 
   @Nested
-  @DisplayName("Calculator isValidOperation Tests")
-  class isValidOperationTests {
-    @Test
-    @DisplayName("Valid Test")
-    void validTest() {
-      Assertions.assertTrue(Calculator.isValidOperation("add"));
-    }
-
+  @DisplayName("Calculator isInvalidOperation Tests")
+  class isInvalidOperationTests {
     @Test
     @DisplayName("Invalid Test")
     void invalidTest() {
-      Assertions.assertFalse(Calculator.isValidOperation("foo"));
+      Assertions.assertTrue(Calculator.isInvalidOperation("foo"));
+    }
+
+    @Test
+    @DisplayName("Valid Test")
+    void validTest() {
+      Assertions.assertFalse(Calculator.isInvalidOperation("add"));
     }
   }
 }
