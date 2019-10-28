@@ -55,7 +55,7 @@ public class Calculator {
   //
   public static void ensureValidOperation(String operation) throws InvalidOperationException {
     for (String validOperation : validOperations) {
-      if (operation == validOperation) {
+      if (operation.equals(validOperation)) {
         return;
       }
     }
