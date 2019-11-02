@@ -45,7 +45,7 @@ class AppTest {
     String[] validArgs = {"foo", "1", "1"};
     App.main(validArgs);
     Assertions.assertEquals(
-        "Operation is invalid, please input the following: add, substract, multiply, divide",
+        "command not implemented",
         testStdout.toString());
   }
 

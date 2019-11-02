@@ -1,6 +1,6 @@
 package ristek.calculator;
 
-public class InvalidOperationException extends Exception {
+public class InvalidOperationException extends RuntimeException {
 
   // @param errorMessage is the error message
 
